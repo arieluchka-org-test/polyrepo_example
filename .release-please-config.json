@@ -1,0 +1,35 @@
+# Release Please Configuration
+
+# This file configures release-please for the polyrepo
+# It uses separate workflows for each package
+
+{
+  "packages": {
+    "backend": {
+      "release-type": "node",
+      "package-name": "@polyrepo/backend",
+      "bump-minor-pre-major": true,
+      "bump-patch-for-minor-pre-major": true,
+      "changelog-sections": [
+        {"type": "feat", "section": "Features"},
+        {"type": "fix", "section": "Bug Fixes"},
+        {"type": "perf", "section": "Performance Improvements"},
+        {"type": "docs", "section": "Documentation"},
+        {"type": "chore", "section": "Miscellaneous", "hidden": false}
+      ]
+    },
+    "client": {
+      "release-type": "node",
+      "package-name": "@polyrepo/client",
+      "bump-minor-pre-major": true,
+      "bump-patch-for-minor-pre-major": true,
+      "changelog-sections": [
+        {"type": "feat", "section": "Features"},
+        {"type": "fix", "section": "Bug Fixes"},
+        {"type": "perf", "section": "Performance Improvements"},
+        {"type": "docs", "section": "Documentation"},
+        {"type": "chore", "section": "Miscellaneous", "hidden": false}
+      ]
+    }
+  }
+}

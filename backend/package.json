@@ -1,0 +1,13 @@
+{
+  "name": "@polyrepo/backend",
+  "version": "1.0.0",
+  "description": "Backend service for polyrepo example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Running backend tests...\" && exit 0"
+  },
+  "keywords": ["backend", "api"],
+  "author": "",
+  "license": "MIT"
+}

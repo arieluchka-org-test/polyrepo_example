@@ -1,0 +1,14 @@
+{
+  "name": "@polyrepo/client",
+  "version": "1.0.0",
+  "description": "Frontend client for polyrepo example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo \"Building client...\" && exit 0",
+    "test": "echo \"Running client tests...\" && exit 0"
+  },
+  "keywords": ["client", "frontend"],
+  "author": "",
+  "license": "MIT"
+}

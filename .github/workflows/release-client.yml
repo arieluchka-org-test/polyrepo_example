@@ -1,0 +1,27 @@
+name: Release Please - Client
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'client/**'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        with:
+          # Path to the package to release
+          path: client
+          # Package name for release
+          package-name: client
+          # Release type determines how version bumps are calculated
+          release-type: node
+          # Token for creating releases and PRs
+          token: ${{ secrets.GITHUB_TOKEN }}
