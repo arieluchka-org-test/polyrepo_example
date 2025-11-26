@@ -1,0 +1,23 @@
+name: Release Please - Simple Example
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'simple_example/**'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        with:
+          path: simple_example
+          package-name: simple-example
+          release-type: simple
+          token: ${{ secrets.GITHUB_TOKEN }}
