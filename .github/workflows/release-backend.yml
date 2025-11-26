@@ -22,6 +22,6 @@ jobs:
           # Package name for release
           package-name: backend
           # Release type determines how version bumps are calculated
-          release-type: node
+          release-type: simple
           # Token for creating releases and PRs
           token: ${{ secrets.GITHUB_TOKEN }}
