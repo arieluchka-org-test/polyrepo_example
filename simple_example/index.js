@@ -1,1 +1,1 @@
-console.log('Hello from simple example 2!');
+console.log('Shachar i will miss you <3!');
