@@ -1,0 +1,20 @@
+name: Check Fail Example
+
+on:
+  pull_request:
+    branches: [main, master]
+  push:
+    branches: [main, master]
+
+jobs:
+  always-fail:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Run failing check
+        run: |
+          echo "❌ This check always fails!"
+          echo "Validation failed"
+          exit 1

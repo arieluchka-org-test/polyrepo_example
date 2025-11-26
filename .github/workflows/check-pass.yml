@@ -1,0 +1,20 @@
+name: Check Pass Example
+
+on:
+  pull_request:
+    branches: [main, master]
+  push:
+    branches: [main, master]
+
+jobs:
+  always-pass:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Run passing check
+        run: |
+          echo "✅ This check always passes!"
+          echo "Validation successful"
+          exit 0
